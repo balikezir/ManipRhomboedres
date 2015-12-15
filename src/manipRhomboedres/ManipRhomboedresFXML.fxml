@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manipRhomboedres.ManipRhomboedresController">
+   <children>
+      <GridPane prefHeight="1000.0" prefWidth="1010.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TitledPane animated="false" prefHeight="167.0" prefWidth="1012.0" text="Digimétrie">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="1010.0">
+                     <children>
+                        <Label layoutX="256.0" layoutY="74.0" text="Nb Mesures du Flux" />
+                        <TextField fx:id="tfNbMesCell" alignment="CENTER" layoutX="365.0" layoutY="70.0" prefWidth="40.0" text="50" />
+                        <Label layoutX="14.0" layoutY="18.0" text="Adresse du serveur" />
+                        <ComboBox fx:id="comboBoxServeurDigimetrie" layoutX="130.0" layoutY="14.0" prefWidth="150.0" />
+                        <Label layoutX="93.0" layoutY="54.0" text="Port" />
+                        <TextField fx:id="tfPortDigimetrie" alignment="CENTER" layoutX="130.0" layoutY="50.0" prefWidth="58.0" text="1000" />
+                        <CheckBox disable="true" layoutX="307.0" layoutY="26.0" mnemonicParsing="false" text="Obturateur" />
+                        <Pane layoutX="405.0" prefHeight="146.0" prefWidth="274.0">
+                           <children>
+                              <TextField fx:id="tfIncertCell1" editable="false" layoutX="108.0" layoutY="53.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfFluxMoyCell1" editable="false" layoutX="108.0" layoutY="23.0" prefHeight="25.0" prefWidth="92.0" />
+                              <Label layoutX="125.0" layoutY="5.0" text="Cellule N°1" />
+                              <Label layoutX="17.0" layoutY="26.0" text="Flux Moy." />
+                              <Label layoutX="17.0" layoutY="56.0" text="Incert Flux Moy." />
+                              <Label layoutX="203.0" layoutY="26.0" text="mW" />
+                              <Label layoutX="203.0" layoutY="56.0" text="mW" />
+                              <Label layoutX="203.0" layoutY="117.0" text="mW" />
+                              <Label layoutX="203.0" layoutY="87.0" text="mW" />
+                              <Label layoutX="18.0" layoutY="117.0" text="Incert Dark Moy." />
+                              <Label layoutX="18.0" layoutY="87.0" text="Dark Moy." />
+                              <TextField fx:id="tfDarkMoyCell1" editable="false" layoutX="108.0" layoutY="84.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfIncertDarkCell1" editable="false" layoutX="108.0" layoutY="114.0" prefHeight="25.0" prefWidth="92.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="679.0" layoutY="-2.0" prefHeight="146.0" prefWidth="274.0">
+                           <children>
+                              <Label layoutX="123.0" layoutY="5.0" text="Cellule N°2" />
+                              <Label layoutX="17.0" layoutY="26.0" text="Flux Moy." />
+                              <Label layoutX="17.0" layoutY="56.0" text="Incert Flux Moy." />
+                              <TextField fx:id="tfFluxMoyCell2" editable="false" layoutX="108.0" layoutY="23.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfIncertCell2" editable="false" layoutX="108.0" layoutY="53.0" prefHeight="25.0" prefWidth="92.0" />
+                              <Label layoutX="203.0" layoutY="26.0" text="mW" />
+                              <Label layoutX="203.0" layoutY="56.0" text="mW" />
+                              <TextField fx:id="tfDarkMoyCell2" editable="false" layoutX="108.0" layoutY="84.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfIncertDarkCell2" editable="false" layoutX="108.0" layoutY="114.0" prefHeight="25.0" prefWidth="92.0" />
+                              <Label layoutX="18.0" layoutY="87.0" text="Dark Moy." />
+                              <Label layoutX="18.0" layoutY="117.0" text="Incert Dark Moy." />
+                              <Label layoutX="203.0" layoutY="87.0" text="mW" />
+                              <Label layoutX="203.0" layoutY="117.0" text="mW" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" prefWidth="1012.0" text="SMC100" GridPane.rowIndex="1">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1010.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxServeurSmc100" layoutX="130.0" layoutY="14.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="18.0" text="Adresse du serveur" />
+                        <Label layoutX="93.0" layoutY="54.0" text="Port" />
+                        <TextField fx:id="tfPortSmc100" alignment="CENTER" layoutX="130.0" layoutY="50.0" prefWidth="58.0" text="2000" />
+                        <Label layoutX="509.0" layoutY="28.0" text="P1 (°)" />
+                        <Label layoutX="453.0" layoutY="61.0" text="Rhomboèdre (°)" />
+                        <Label layoutX="229.0" layoutY="94.0" text="Position Hors Faisceau (mm)" />
+                        <TextField fx:id="tfPosP1" alignment="CENTER" editable="false" layoutX="545.0" layoutY="25.0" prefWidth="65.0" text="0" />
+                        <TextField fx:id="tfPosRhomb" alignment="CENTER" editable="false" layoutX="545.0" layoutY="57.0" prefWidth="65.0" text="0" />
+                        <TextField fx:id="tfPosTranslatHorsFaisceau" alignment="CENTER" editable="false" layoutX="385.0" layoutY="90.0" prefWidth="65.0" text="-10" />
+                        <Label layoutX="297.0" layoutY="28.0" text="P1 extinction (°)" />
+                        <TextField fx:id="tfPosP1Extinction" alignment="CENTER" layoutX="384.0" layoutY="24.0" prefWidth="65.0" text="18" />
+                        <TextField fx:id="tfPosRhombExtinction" alignment="CENTER" layoutX="384.0" layoutY="57.0" prefWidth="65.0" text="5" />
+                        <Label layoutX="241.0" layoutY="61.0" text="Rhomboèdre extinction (°)" />
+                        <TextField fx:id="tfNbToursP1" alignment="CENTER" layoutX="687.0" layoutY="27.0" prefWidth="45.0" text="2" />
+                        <Label layoutX="614.0" layoutY="30.0" text="Nb de tours" />
+                        <Label layoutX="745.0" layoutY="30.0" text="Incréments de P1 (°)" />
+                        <TextField fx:id="tfIncrementP1" alignment="CENTER" layoutX="857.0" layoutY="27.0" prefWidth="65.0" text="360" />
+                        <TextField fx:id="tfPosTranslatDansFaisceau" alignment="CENTER" editable="false" layoutX="647.0" layoutY="90.0" prefWidth="65.0" text="10" />
+                        <Label layoutX="476.0" layoutY="94.0" text="Position dans le Faisceau (mm)" />
+                        <Label layoutX="733.0" layoutY="94.0" text="Position actuelle (mm)" />
+                        <TextField fx:id="tfPosTranslation" alignment="CENTER" editable="false" layoutX="856.0" layoutY="90.0" prefWidth="65.0" text="0" />
+                        <Label layoutX="712.0" layoutY="61.0" text="Tour actuel" />
+                        <TextField fx:id="tfNumeroDuTourP1" alignment="CENTER" editable="false" layoutX="785.0" layoutY="58.0" prefWidth="45.0" text="0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" prefWidth="1012.0" text="Monochromateur" GridPane.rowIndex="2">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1010.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="18.0" text="Adresse du serveur" />
+                        <ComboBox fx:id="comboBoxServeurMonochromateur" layoutX="130.0" layoutY="14.0" prefWidth="150.0" />
+                        <Label layoutX="93.0" layoutY="54.0" text="Port" />
+                        <TextField fx:id="tfPortMonochromateur" alignment="CENTER" layoutX="130.0" layoutY="50.0" prefWidth="58.0" text="3000" />
+                        <Label layoutX="556.0" layoutY="59.0" text="Lambda active (nm)" />
+                        <TextField fx:id="tfLambda" alignment="CENTER" editable="false" layoutX="665.0" layoutY="55.0" prefWidth="58.0" text="0" />
+                        <TextField fx:id="tfFiltre" alignment="CENTER" editable="false" layoutX="773.0" layoutY="55.0" prefWidth="58.0" text="0" />
+                        <Label layoutX="735.0" layoutY="59.0" text="Filtre" />
+                        <Label layoutX="319.0" layoutY="18.0" text="Lambda Min (nm)" />
+                        <Label layoutX="319.0" layoutY="59.0" text="Lambda Max (nm)" />
+                        <Label layoutX="320.0" layoutY="101.0" text="Pas Lambda (nm)" />
+                        <TextField fx:id="tfLambdaMin" alignment="CENTER" layoutX="435.0" layoutY="14.0" prefWidth="58.0" text="800" />
+                        <TextField fx:id="tfLambdaMax" alignment="CENTER" layoutX="435.0" layoutY="55.0" prefWidth="58.0" text="1000" />
+                        <TextField fx:id="tfLambdaPas" alignment="CENTER" layoutX="435.0" layoutY="97.0" prefWidth="58.0" text="150" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" prefWidth="1012.0" text="PuissanceMètre" GridPane.rowIndex="3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1010.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="18.0" text="Adresse du serveur" />
+                        <ComboBox fx:id="comboBoxServeurPuissanceMetre" layoutX="130.0" layoutY="14.0" prefWidth="150.0" />
+                        <TextField fx:id="tfPortPuissanceMetre" alignment="CENTER" layoutX="130.0" layoutY="50.0" prefHeight="25.0" prefWidth="58.0" text="4000" />
+                        <Label layoutX="93.0" layoutY="54.0" text="Port" />
+                        <Pane layoutX="335.0" layoutY="-2.0" prefHeight="146.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="95.0" layoutY="17.0" text="Flux Mesuré" />
+                              <Label layoutX="17.0" layoutY="70.0" text="Moyenne" />
+                              <Label layoutX="17.0" layoutY="100.0" text="Incertitude" />
+                              <TextField fx:id="tfPMMoy" editable="false" layoutX="82.0" layoutY="70.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfPMIncert" editable="false" layoutX="82.0" layoutY="100.0" prefHeight="25.0" prefWidth="92.0" />
+                              <TextField fx:id="tfPMNbMesures" alignment="CENTER" layoutX="107.0" layoutY="39.0" prefWidth="40.0" text="50" />
+                              <Label layoutX="17.0" layoutY="43.0" text="Nb Mesures" />
+                              <Label layoutX="177.0" layoutY="70.0" text="mW" />
+                              <Label layoutX="177.0" layoutY="100.0" text="mW" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <AnchorPane prefHeight="157.0" prefWidth="1012.0" GridPane.rowIndex="5">
+               <children>
+                  <TextArea fx:id="taLog" prefHeight="166.0" prefWidth="1012.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="168.0" prefWidth="1010.0" GridPane.rowIndex="4">
+               <children>
+                  <Button fx:id="boutonValiderConfig" layoutX="33.0" layoutY="71.0" mnemonicParsing="false" onAction="#validerConfiguration" text="Valider Configuration" />
+                  <Button fx:id="boutonDemarrage" disable="true" layoutX="251.0" layoutY="71.0" mnemonicParsing="false" onAction="#demarrage" text="Démarrage" />
+                  <Label layoutX="537.0" layoutY="34.0" text="Infos" />
+                  <TextField fx:id="tfInfos" alignment="CENTER" layoutX="568.0" layoutY="30.0" prefHeight="25.0" prefWidth="266.0" />
+                  <Label layoutX="415.0" layoutY="34.0" text="Ref." />
+                  <TextField fx:id="tfRefRhomb" alignment="CENTER" layoutX="441.0" layoutY="30.0" prefHeight="25.0" prefWidth="79.0" />
+                  <Button fx:id="boutonEnregistrer" disable="true" layoutX="416.0" layoutY="71.0" mnemonicParsing="false" onAction="#enregistrer" prefHeight="25.0" prefWidth="417.0" text="Enregistrer" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
